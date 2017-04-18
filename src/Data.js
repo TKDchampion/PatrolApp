@@ -12,9 +12,9 @@ import {
   ListItem
 } from 'react-onsenui';
 import Login from './Login';
-import Data from './Data';
+import Home from './Home';
 
-export default class Home extends React.Component {
+export default class Data extends React.Component {
 
   constructor() {
     super();
@@ -44,8 +44,8 @@ export default class Home extends React.Component {
     this.props.navigator.pushPage({ component: Login });
   }
 
-  Data(){
-    this.props.navigator.pushPage({component:Data});
+  Home(){
+    this.props.navigator.pushPage({component:Home});
   }
 
   renderToolbar() {
@@ -57,7 +57,7 @@ export default class Home extends React.Component {
             <Icon icon='ion-navicon, material:md-menu' />
           </ToolbarButton>
         </div>
-        <div className="center">Home</div>
+        <div className="center">Data</div>
       </Toolbar>
 
     );
@@ -77,8 +77,8 @@ export default class Home extends React.Component {
               <List>
                 <List>Menu</List>
                 <ListItem onClick={this.Login.bind(this)}>Login</ListItem>
-                <ListItem Button>Home</ListItem>
-                <ListItem onClick={this.Data.bind(this)}>Data</ListItem>
+                <ListItem onClick={this.Home.bind(this)}>Home</ListItem>
+                <ListItem Button>Data</ListItem>
                 <ListItem onClick={this.Logout.bind(this)}>Logout</ListItem>
               </List>
             </Page>

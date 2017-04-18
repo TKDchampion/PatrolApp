@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Splitter, SplitterSide, SplitterContent, Page, Button, Navigator } from 'react-onsenui';
 import Home from './Home';
 import Login from './Login';
+import Data from './Data';
 
 export default class App extends React.Component {
 
@@ -15,7 +16,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Navigator initialRoute={{ component: Login }} renderPage={this.renderPage.bind(this)} />
+      <Navigator initialRoute={{ component: Home }} renderPage={this.renderPage.bind(this)} />
     );
   }
 }

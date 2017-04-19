@@ -75,7 +75,7 @@ export default class Home extends React.Component {
             isOpen={this.state.isOpen}>
             <Page>
               <List>
-                <List>Menu</List>
+                <List className="menu">Menu</List>
                 <ListItem onClick={this.Login.bind(this)}>Login</ListItem>
                 <ListItem Button>Home</ListItem>
                 <ListItem onClick={this.Data.bind(this)}>Data</ListItem>
@@ -84,7 +84,13 @@ export default class Home extends React.Component {
             </Page>
           </SplitterSide>
           <SplitterContent>
-            <Page renderToolbar={this.renderToolbar.bind(this)}>This is Home</Page>
+            <Page renderToolbar={this.renderToolbar.bind(this)}>
+              <h1>Wecome to use...<br/>PatrolApp!</h1>
+              <p>Please click button on start</p>
+              <section style={{margin: '16px',textAlign: 'center'}}>
+                <button style={{margin: '6px'}} modifier='large'>start</button>
+              </section>
+            </Page>
           </SplitterContent>
         </Splitter>
       </Page>

@@ -4,6 +4,7 @@ import { Splitter, SplitterSide, SplitterContent, Page, Button, Navigator } from
 import Home from './Home';
 import Login from './Login';
 import Data from './Data';
+import style from './style.css';
 
 export default class App extends React.Component {
 
